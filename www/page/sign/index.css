@@ -2,8 +2,75 @@ body {
   margin: 0;
 }
 
-.splash {
-  background-color: #000;
+.sign {
+  max-width: 100vw;
   min-height: 100vh;
-  min-width: 100vw;
+  overflow: hidden;
+}
+
+.header {
+  background-color: #000;
+  padding-bottom: 5px;
+}
+
+.sign-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}
+
+.sign-item {
+  color: #fff;
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+
+.item--border {
+  border-bottom: 3px solid #fa4a0c;
+}
+
+.sign-content {
+  display: flex;
+  justify-content: space-between;
+  width: 200vw;
+  margin-top: 50px;
+  padding: 0;
+  transition: transform 0.25s linear;
+}
+
+.sign-in,
+.sign-up {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  padding: 0 20px;
+}
+
+.sign-icon {
+  font-size: 18px;
+  color: #fa4a0c;
+  margin-right: 5px;
+}
+
+.sign-input {
+  width: 90%;
+  border: none;
+  outline: none;
+  margin: 20px 0;
+  font-size: 16px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #757575;
+}
+
+.sign-button {
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  padding: 15px 0;
+  background: #fa4a0c;
+  border-radius: 30px;
+  margin-top: 30px;
 }
