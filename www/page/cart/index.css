@@ -1,5 +1,56 @@
-.app {
-  width: 100vw;
-  height: 100vh;
-  background-color: gray;
+body {
+  margin: 0;
+}
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.cart-header {
+  display: flex;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.cart-header-text {
+  flex: 1;
+  text-align: center;
+}
+
+.cart-empty {
+  display: flex;
+  flex-direction: column;
+  transform: translateY(100%);
+}
+
+.cart-empty-img-container {
+  width: 100%;
+  text-align: center;
+}
+
+.cart-empty-img-container img {
+  width: 100px;
+}
+
+.cart-empty-text {
+  flex: 1;
+  text-align: center;
+  color: #a0a0a0;
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.cart-empty-btn {
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  padding: 15px 0;
+  background: #fa4a0c;
+  border-radius: 30px;
+  margin-top: 30px;
 }

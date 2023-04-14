@@ -43,12 +43,26 @@
     -->
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
 
-    <link rel="stylesheet" type="text/css" href="styles/index.css" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
     <title>Fast Food</title>
   </head>
   <body>
-    <div class="app">
-      <a href="/page/splash/index.html">click me!</a>
+    <div class="splash">
+      <div class="splash-banner-container">
+        <img class="splash-banner" src="../../img/big-banner.png" />
+      </div>
+      <ul class="splash-list">
+        <li class="splash-text">Đặt</li>
+        <li class="splash-text">Đồ</li>
+        <li class="splash-text">Ăn</li>
+        <li class="splash-text">Nhanh</li>
+      </ul>
+      <a class="splash-nav" href="./page/sign/index.html">
+        <span class="splash-nav__text">Bắt đầu</span>
+        <div>
+          <img class="splash-nav__img" src="../../img/chef.png" />
+        </div>
+      </a>
     </div>
     <script type="text/javascript" src="index.js"></script>
   </body>

@@ -18,7 +18,6 @@
 
     <!-- Define the main entry-point to the application -->
     <content src="index.html" />
-    <icon src="img/fast-food.png"></icon>
 
     <!-- Customize your app and platform with the preference element. -->
     <preference name="DisallowOverscroll"         value="true" />
@@ -41,6 +40,9 @@
     <plugin name="cordova-plugin-vibration"           source="npm" spec="~2.1.5" />
 
     <!-- Define app icon and splashscreen for each platform. -->
+    <platform name="browser">
+        <icon   src="www/img/fast-food.png"               density="ldpi" />
+    </platform>
     <platform name="android">
         <icon   src="www/res/icon/android/drawable-ldpi-icon.png"               density="ldpi" />
         <icon   src="www/res/icon/android/drawable-mdpi-icon.png"               density="mdpi" />

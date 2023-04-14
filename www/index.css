@@ -9,11 +9,13 @@ body {
 }
 
 .splash-banner-container {
+  width: 100%;
   padding-bottom: 10px;
   border-bottom: 1px solid #fa4a0c;
 }
 
 .splash-banner {
+  width: 100%;
   margin-top: 100px;
 }
 
