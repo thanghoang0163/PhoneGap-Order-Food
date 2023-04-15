@@ -48,9 +48,50 @@
   </head>
 
   <body>
-    <div class="app">
-      <h1>abc</h1>
+    <div class="profile">
+      <div class="profile-header">
+        <i class="fa-solid fa-chevron-left"></i>
+        <div class="profile-header-text">Trang cá nhân</div>
+      </div>
+      <div class="profile-info">
+        <div class="profile-title">Thông tin của tôi</div>
+        <div class="profile-content">
+          <img src="../../img/avatar.png" class="profile-info-img" />
+          <div class="profile-info-text">
+            <div class="profile-name">Nguyen Van A</div>
+            <div class="proflie-phone">0123456789</div>
+          </div>
+        </div>
+      </div>
+      <div class="profile-payment">
+        <div class="profile-title">Phương thức thanh toán</div>
+        <div class="profile-content profile-payment-content">
+          <div class="profile-payment-item">
+            <input type="radio" name="payment" class="profile-radio-btn" />
+            <img
+              src="../../img/card.png"
+              class="profile-card-img profile-payment-img"
+            />
+            <label class="profile-payment-text" for="payment">Thẻ ATM</label>
+          </div>
+          <div class="profile-payment-item">
+            <input type="radio" name="payment" class="profile-radio-btn" />
+            <img
+              src="../../img/bank.png"
+              class="profile-bank-img profile-payment-img"
+            />
+            <label class="profile-payment-text" for="payment"
+              >Tài khoản ngân hàng</label
+            >
+          </div>
+        </div>
+      </div>
+      <button class="update-btn">Cập nhật</button>
     </div>
     <script type="text/javascript" src="index.js"></script>
+    <script
+      src="https://kit.fontawesome.com/44c439f475.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

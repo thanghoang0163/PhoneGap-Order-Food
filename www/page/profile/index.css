@@ -1,5 +1,93 @@
-.app {
-  width: 100vw;
-  height: 100vh;
-  background-color: gray;
+body {
+  margin: 0;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.profile-header {
+  display: flex;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.profile-header-text {
+  flex: 1;
+  text-align: center;
+}
+
+.profile-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.profile-content {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #e5e5e5;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.03);
+  border-radius: 20px;
+}
+
+.profile-info {
+  margin-top: 50px;
+}
+
+.profile-info-img {
+  width: 80px;
+  margin-right: 20px;
+}
+
+.profile-name {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.profile-payment {
+  margin-top: 50px;
+}
+
+.profile-payment-content {
+  display: block;
+}
+
+.profile-payment-item {
+  display: flex;
+  align-items: center;
+}
+
+.profile-payment-item:first-child {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ffffff;
+}
+
+.profile-payment-img {
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 10px;
+}
+
+.profile-card-img {
+  background: #f47b0a;
+}
+
+.profile-bank-img {
+  background: linear-gradient(0deg, #eb4796, #eb4796), #c4c4c4;
+}
+
+.update-btn {
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  padding: 15px 0;
+  background: #fa4a0c;
+  border-radius: 30px;
+  margin-top: 30px;
 }
