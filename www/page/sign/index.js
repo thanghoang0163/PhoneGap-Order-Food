@@ -25,5 +25,5 @@ signUp.addEventListener("click", () => {
 
 const button = $(".sign-button");
 button.addEventListener("click", () => {
-  location.replace("/page/splash/index.html");
+  location.replace("/");
 });
