@@ -1,3 +1,10 @@
 body {
   margin: 0;
 }
+
+.back-button {
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  font-weight: 600;
+}

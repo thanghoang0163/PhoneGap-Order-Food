@@ -15,6 +15,13 @@ body {
   margin-bottom: 20px;
 }
 
+.back-button {
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  font-weight: 600;
+}
+
 .checkout-header-text {
   flex: 1;
   text-align: center;
