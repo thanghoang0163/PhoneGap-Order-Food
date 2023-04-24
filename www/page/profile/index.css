@@ -2,6 +2,10 @@ body {
   margin: 0;
 }
 
+* {
+  font-family: "Times New Roman", Times, serif;
+}
+
 .profile {
   display: flex;
   flex-direction: column;
@@ -30,7 +34,7 @@ body {
 .profile-title {
   font-size: 18px;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-top: 50px;
 }
 
 .profile-content {
@@ -42,51 +46,45 @@ body {
   border-radius: 20px;
 }
 
-.profile-info {
-  margin-top: 50px;
+.profile-avatar {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
 }
 
 .profile-info-img {
-  width: 80px;
-  margin-right: 20px;
+  width: 100px;
+  transform: translateX(-15%);
 }
 
-.profile-name {
-  margin-bottom: 10px;
-  font-weight: 600;
+.profile-info-text {
+  width: 100%;
 }
 
-.profile-payment {
-  margin-top: 50px;
-}
-
-.profile-payment-content {
-  display: block;
-}
-
-.profile-payment-item {
+.profile-item {
   display: flex;
-  align-items: center;
 }
 
-.profile-payment-item:first-child {
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #ffffff;
+.profile-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  white-space: pre-wrap;
+  background-color: #e5e5e5;
 }
 
-.profile-payment-img {
-  border-radius: 10px;
-  padding: 10px;
-  margin: 0 10px;
+.profile-edit-btn {
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
 }
 
-.profile-card-img {
-  background: #f47b0a;
-}
-
-.profile-bank-img {
-  background: linear-gradient(0deg, #eb4796, #eb4796), #c4c4c4;
+.profile-name,
+.profile-phone {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #fff;
 }
 
 .update-btn {
