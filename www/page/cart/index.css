@@ -30,7 +30,7 @@ body {
 .cart-empty {
   display: flex;
   flex-direction: column;
-  transform: translateY(100%);
+  transform: translateY(50%);
 }
 
 .cart-empty-img-container {
