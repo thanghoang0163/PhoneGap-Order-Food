@@ -2,6 +2,10 @@ body {
   margin: 0;
 }
 
+* {
+  font-family: "Times New Roman", Times, serif;
+}
+
 .cart {
   display: flex;
   flex-direction: column;
