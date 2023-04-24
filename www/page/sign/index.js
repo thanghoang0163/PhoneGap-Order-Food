@@ -22,8 +22,3 @@ signIn.addEventListener("click", () => {
 signUp.addEventListener("click", () => {
   signContent.style = "transform: translateX(-100vw)";
 });
-
-const button = $(".sign-button");
-button.addEventListener("click", () => {
-  location.replace("/");
-});
