@@ -47,54 +47,42 @@
     <title>Fast Food</title>
   </head>
   <body>
-    <div class="sign">
-      <div class="header">
-        <img class="splash-sign__img" src="../../img/large-banner.png" />
-        <ul class="sign-list">
-          <li class="sign-item">Đăng nhập</li>
-          <li class="sign-item">Đăng ký</li>
-        </ul>
+    <div class="product">
+      <div class="product-header">
+        <button class="product-header-btn product-menu-btn">
+          <img src="../../img/menu.png" class="product-header-img" />
+        </button>
+        <a
+          href="/page/cart/index.html"
+          class="product-header-btn product-cart-btn"
+        >
+          <img src="../../img/cart.png" class="product-header-img" />
+        </a>
       </div>
-      <div class="sign-content">
-        <div class="sign-in">
-          <div class="phone">
-            <i class="fa-solid fa-phone sign-icon"></i>
-            <input
-              type="text"
-              placeholder="Nhập số điện thoại"
-              class="sign-input"
-            />
-          </div>
-          <div class="password">
-            <i class="fa-solid fa-lock sign-icon"></i>
-            <input
-              type="password"
-              placeholder="Nhập mật khẩu"
-              class="sign-input"
-            />
-          </div>
-          <button class="sign-button">Đăng nhập</button>
-        </div>
-        <div class="sign-up">
-          <div class="phone">
-            <i class="fa-solid fa-phone sign-icon"></i>
-            <input
-              type="text"
-              placeholder="Nhập số điện thoại"
-              class="sign-input"
-            />
-          </div>
-          <div class="password">
-            <i class="fa-solid fa-lock sign-icon"></i>
-            <input
-              type="password"
-              placeholder="Nhập mật khẩu"
-              class="sign-input"
-            />
-          </div>
-          <button class="sign-button">Đăng ký</button>
-        </div>
+      <div class="product-list">
+        <a href="/page/product-detail/index.html" class="product-item">
+          <img src="../../img/hamburger.png" class="product-img" />
+          <span class="product-name">Hamburger</span>
+          <span class="product-price">50000</span>
+        </a>
       </div>
+    </div>
+    <div class="side-menu">
+      <a href="/page/product/index.html">
+        <i class="fa-solid fa-house"></i>
+        <span>Trang chủ</span>
+      </a>
+      <a href="/page/profile/index.html">
+        <i class="fa-solid fa-user"></i>
+        <span>Trang cá nhân</span>
+      </a>
+      <a href="/page/cart/index.html">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span>Giỏ hàng</span>
+      </a>
+      <button class="close-btn">
+        <i class="fa-solid fa-circle-xmark"></i>
+      </button>
     </div>
     <script type="text/javascript" src="index.js"></script>
     <script
