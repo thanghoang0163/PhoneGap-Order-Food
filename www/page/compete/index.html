@@ -47,54 +47,48 @@
     <title>Fast Food</title>
   </head>
   <body>
-    <div class="sign">
-      <div class="header">
-        <img class="splash-sign__img" src="../../img/large-banner.png" />
-        <ul class="sign-list">
-          <li class="sign-item">Đăng nhập</li>
-          <li class="sign-item">Đăng ký</li>
-        </ul>
+    <div class="compete">
+      <div class="compete-header">
+        <button class="back-button">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <div class="compete-header-text">Xác nhận thông tin đặt hàng</div>
       </div>
-      <div class="sign-content">
-        <div class="sign-in">
-          <div class="phone">
-            <i class="fa-solid fa-phone sign-icon"></i>
-            <input
-              type="text"
-              placeholder="Nhập số điện thoại"
-              class="sign-input"
-            />
+      <div class="compete-info">
+        <div class="compete-title">Địa chỉ</div>
+        <div class="compete-content compete-info-content">
+          <div class="compete-name">Nguyen Van A</div>
+          <div class="compete-address">
+            123 Nguyễn Văn Cừ, Thống Nhất, TP.Thủ Đức
           </div>
-          <div class="password">
-            <i class="fa-solid fa-lock sign-icon"></i>
-            <input
-              type="password"
-              placeholder="Nhập mật khẩu"
-              class="sign-input"
-            />
-          </div>
-          <button class="sign-button">Đăng nhập</button>
-        </div>
-        <div class="sign-up">
-          <div class="phone">
-            <i class="fa-solid fa-phone sign-icon"></i>
-            <input
-              type="text"
-              placeholder="Nhập số điện thoại"
-              class="sign-input"
-            />
-          </div>
-          <div class="password">
-            <i class="fa-solid fa-lock sign-icon"></i>
-            <input
-              type="password"
-              placeholder="Nhập mật khẩu"
-              class="sign-input"
-            />
-          </div>
-          <button class="sign-button">Đăng ký</button>
+          <div class="compete-phone">0123456789</div>
         </div>
       </div>
+      <div class="compete-payment">
+        <div class="compete-title">Phương thức thanh toán</div>
+        <div class="compete-content compete-payment-content">
+          <div class="compete-payment-item">
+            <img
+              src="../../img/bank.png"
+              class="compete-bank-img compete-payment-img"
+            />
+            <label class="compete-payment-text" for="payment"
+              >Tài khoản ngân hàng</label
+            >
+          </div>
+        </div>
+      </div>
+      <div class="compete-delivery-method">
+        <div class="compete-title">Phương thức giao hàng</div>
+        <div class="compete-content compete-payment-content">
+          <div class="compete-payment-item">
+            <label class="compete-payment-text" for="payment"
+              >Giao đến cửa</label
+            >
+          </div>
+        </div>
+      </div>
+      <button class="compete-btn">Thanh toán</button>
     </div>
     <script type="text/javascript" src="index.js"></script>
     <script

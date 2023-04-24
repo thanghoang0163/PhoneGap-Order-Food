@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+}
+
+.compete {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.compete-header {
+  display: flex;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.back-button {
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.compete-header-text {
+  flex: 1;
+  text-align: center;
+}
+
+.compete-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.compete-content {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #e5e5e5;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.03);
+  border-radius: 20px;
+}
+
+.compete-info {
+  margin-top: 40px;
+}
+
+.compete-info-content {
+  display: block;
+}
+
+.compete-info-img {
+  width: 80px;
+  margin-right: 20px;
+}
+
+.compete-name,
+.compete-address {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #fff;
+}
+
+.compete-payment,
+.compete-delivery-method {
+  margin-top: 50px;
+}
+
+.compete-payment-content {
+  display: block;
+}
+
+.compete-payment-item {
+  display: flex;
+  align-items: center;
+}
+
+.compete-payment-img {
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 10px;
+}
+
+.compete-card-img {
+  background: #f47b0a;
+}
+
+.compete-bank-img {
+  background: linear-gradient(0deg, #eb4796, #eb4796), #c4c4c4;
+}
+
+.compete-delivery-method .compete-radio-btn {
+  margin-right: 10px;
+}
+
+.compete-btn {
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  padding: 15px 0;
+  background: #fa4a0c;
+  border-radius: 30px;
+  margin-top: 30px;
+}
