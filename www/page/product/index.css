@@ -19,6 +19,7 @@ body {
 .product-header-btn {
   border: none;
   background-color: transparent;
+  padding: 0;
 }
 
 .product-header-img {
@@ -77,6 +78,10 @@ body {
 .side-menu i {
   margin-right: 10px;
   color: #fa4a0c;
+}
+
+.side-menu a:first-child i {
+  margin-right: 12px;
 }
 
 .side-menu a:nth-child(2) i {

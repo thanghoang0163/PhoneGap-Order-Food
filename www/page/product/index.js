@@ -1,3 +1,6 @@
+// import { database } from "./firebase";
+// import { ref, child, get } from "firebase/database";
+
 var $ = document.querySelector.bind(document);
 var $$ = document.querySelectorAll.bind(document);
 
@@ -9,6 +12,8 @@ function formatNumber(num) {
 const sideMenu = $(".side-menu");
 const menuBtn = $(".product-menu-btn");
 const closeBtn = $(".close-btn");
+const price = $(".product-price");
+const productList = $(".product-list");
 
 menuBtn.addEventListener("click", () => {
   sideMenu.style = `transform: translateX(0)`;
@@ -18,5 +23,21 @@ closeBtn.addEventListener("click", () => {
   sideMenu.style = `transform: translateX(-100%)`;
 });
 
-const price = $(".product-price");
-formatNumber(price.innerText);
+price.innerHTML = formatNumber(50000);
+
+const getAPI = () => {
+  const dbRef = ref(database);
+  get(child(dbRef, `user/1`))
+    .then((snapshot) => {
+      if (snapshot.exists()) {
+        console.log(snapshot.val());
+      } else {
+        console.log("No data available");
+      }
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+};
+
+// getAPI();
