@@ -1,4 +1,4 @@
-// import { database } from "./firebase";
+import { database } from "./firebase.js";
 // import { ref, child, get } from "firebase/database";
 
 var $ = document.querySelector.bind(document);
