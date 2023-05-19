@@ -83,3 +83,9 @@ body {
   justify-content: center;
   text-decoration: none;
 }
+
+.check-sign {
+  display: none;
+  color: red;
+  font-size: 14px;
+}
