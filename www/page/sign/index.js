@@ -16,8 +16,10 @@ const signUp = $(".sign-item:last-child");
 const signContent = $(".sign-content");
 const signInBtn = $(".sign-in .sign-button");
 const signUpBtn = $(".sign-up .sign-button");
-const phoneInput = $(".sign-input[type=text]");
-const passInput = $(".sign-input[type=password]");
+const phoneSignIn = $(".sign-in .sign-input[type=text]");
+const passSignIn = $(".sign-in .sign-input[type=password]");
+const phoneSignUp = $(".sign-up .sign-input[type=text]");
+const passSignUp = $(".sign-up .sign-input[type=password]");
 const checkSignIn = $(".sign-in .check-sign");
 const checkSignUp = $(".sign-up .check-sign");
 
@@ -30,8 +32,21 @@ signUp.addEventListener("click", () => {
 });
 
 signUpBtn.addEventListener("click", () => {
-  checkSignUp.style.color = "green";
-  checkSignUp.style.display = "block";
+  if (phoneSignUp.value != "") {
+    if (passSignUp.value != "") {
+      checkSignUp.style.color = "green";
+      checkSignUp.style.display = "block";
+      checkSignUp.innerHTML = "Đăng ký thành công";
+    } else {
+      checkSignUp.style.color = "red";
+      checkSignUp.style.display = "block";
+      checkSignUp.innerHTML = "Vui lòng điền đầy đủ thông tin!";
+    }
+  } else {
+    checkSignUp.style.color = "red";
+    checkSignUp.style.display = "block";
+    checkSignUp.innerHTML = "Vui lòng điền đầy đủ thông tin!";
+  }
 });
 
 async function logJSONData() {
@@ -40,17 +55,15 @@ async function logJSONData() {
   const signData = await resSign.json();
   const userData = await resUser.json();
   signInBtn.addEventListener("click", () => {
-    if (phoneInput.value == signData.user.phone) {
-      if (passInput.value == signData.user.password) {
+    if (phoneSignIn.value == signData.user.phone) {
+      if (passSignIn.value == signData.user.password) {
         localStorage.setItem("user", JSON.stringify(userData));
         window.location.href = "/page/product/index.html";
       } else {
         checkSignIn.style.display = "block";
-        checkSignIn.innerHTML = "Mật khẩu sai!";
       }
     } else {
       checkSignIn.style.display = "block";
-      checkSignIn.innerHTML = "Số điện thoại hoặc mật khẩu sai!";
     }
   });
 }
