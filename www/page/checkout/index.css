@@ -3,6 +3,7 @@ body {
 }
 
 * {
+  box-sizing: border-box;
   font-family: "Times New Roman", Times, serif;
 }
 
@@ -104,6 +105,17 @@ body {
   margin-right: 10px;
 }
 
+.button {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+}
+
 .checkout-btn {
   border: none;
   color: #fff;
@@ -111,5 +123,5 @@ body {
   padding: 15px 0;
   background: #fa4a0c;
   border-radius: 30px;
-  margin-top: 30px;
+  width: 100%;
 }

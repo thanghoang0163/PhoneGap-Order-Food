@@ -3,6 +3,7 @@ body {
 }
 
 * {
+  box-sizing: border-box;
   font-family: "Times New Roman", Times, serif;
 }
 
@@ -10,6 +11,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 20px;
+  padding-bottom: 110px;
 }
 
 .compete-header {
@@ -44,6 +46,43 @@ body {
   background-color: #e5e5e5;
   box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.03);
   border-radius: 20px;
+}
+
+.compete-product {
+  margin-top: 40px;
+}
+
+.product-item {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  background-color: #e5e5e5;
+  border-radius: 30px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.product-img {
+  width: 50px;
+}
+
+.product-number {
+  flex: 1;
+  margin-left: 30px;
+}
+
+.price-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding-right: 10px;
+}
+
+.product-price {
+  color: #fa4a0c;
+  margin-bottom: 5px;
 }
 
 .compete-info {
@@ -98,6 +137,17 @@ body {
   margin-right: 10px;
 }
 
+.button {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+}
+
 .compete-btn {
   border: none;
   color: #fff;
@@ -105,5 +155,43 @@ body {
   padding: 15px 0;
   background: #fa4a0c;
   border-radius: 30px;
-  margin-top: 30px;
+  width: 100%;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(51, 51, 51, 0.4);
+  z-index: 10;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.overlay i {
+  color: green;
+  font-size: 60px;
+}
+
+.overlay span {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.show {
+  display: flex;
 }

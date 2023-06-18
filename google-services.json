@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "461996705787",
+    "project_id": "sign-ed3fb",
+    "storage_bucket": "sign-ed3fb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:461996705787:android:cab649cde23129d1d5ad5e",
+        "android_client_info": {
+          "package_name": "io.cordova.hellocordova"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "461996705787-kfcb6kjrc4s5qijhlopu6qku88al7um7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoKo5gTgC1uDnwzko5FQ6wAdYgBjbRzsE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "461996705787-kfcb6kjrc4s5qijhlopu6qku88al7um7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

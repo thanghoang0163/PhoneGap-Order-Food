@@ -28,11 +28,14 @@ signUp.addEventListener("click", () => {
 });
 
 async function logJSONData() {
-  const response = await fetch("https://testapi.io/api/thanghoang/sign");
-  const jsonData = await response.json();
+  const resSign = await fetch("https://testapi.io/api/thanghoang/sign");
+  const resUser = await fetch("https://testapi.io/api/thanghoang/user");
+  const signData = await resSign.json();
+  const userData = await resUser.json();
   signInBtn.addEventListener("click", () => {
-    if (phoneInput.value == jsonData.user.phone) {
-      if (passInput.value == jsonData.user.password) {
+    if (phoneInput.value == signData.user.phone) {
+      if (passInput.value == signData.user.password) {
+        localStorage.setItem("user", JSON.stringify(userData));
         window.location.href = "/page/product/index.html";
       } else {
         checkText.style.display = "block";

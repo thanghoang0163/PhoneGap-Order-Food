@@ -47,12 +47,22 @@
     <title>Fast Food</title>
   </head>
   <body>
+    <div class="overlay">
+      <div class="content">
+        <i class="fa-solid fa-check"></i>
+        <span>Đặt hàng thàng công</span>
+      </div>
+    </div>
     <div class="compete">
       <div class="compete-header">
         <button class="back-button">
           <i class="fa-solid fa-chevron-left"></i>
         </button>
         <div class="compete-header-text">Xác nhận thông tin đặt hàng</div>
+      </div>
+      <div class="compete-product">
+        <div class="compete-title">Món đã đặt</div>
+        <div class="compete-list"></div>
       </div>
       <div class="compete-info">
         <div class="compete-title">Địa chỉ</div>
@@ -88,9 +98,12 @@
           </div>
         </div>
       </div>
-      <button class="compete-btn">Thanh toán</button>
+      <div class="button">
+        <button class="compete-btn">Thanh toán</button>
+      </div>
     </div>
-    <script type="text/javascript" src="index.js"></script>
+    <script type="module" src="index.js"></script>
+    <script type="module" src="../../utils/common.js"></script>
     <script
       src="https://kit.fontawesome.com/44c439f475.js"
       crossorigin="anonymous"

@@ -46,11 +46,46 @@
     <link rel="stylesheet" type="text/css" href="index.css" />
     <title>Fast Food</title>
   </head>
-
   <body>
-    <div class="app">
-      <h1>abc</h1>
+    <div class="product">
+      <div class="product-header">
+        <button class="product-header-btn product-menu-btn">
+          <img src="../../img/menu.png" class="product-header-img" />
+        </button>
+        <a
+          href="/page/cart/index.html"
+          class="product-header-btn product-cart-btn"
+        >
+          <img src="../../img/cart.png" class="product-header-img" />
+        </a>
+      </div>
+      <div class="product-list"></div>
+      <div class="button">
+        <button class="cart-btn">Giỏ hàng</button>
+      </div>
     </div>
-    <script type="text/javascript" src="index.js"></script>
+    <div class="side-menu">
+      <a href="/page/product/index.html">
+        <i class="fa-solid fa-burger"></i>
+        <span>Sản phẩm</span>
+      </a>
+      <a href="/page/profile/index.html">
+        <i class="fa-solid fa-user"></i>
+        <span>Trang cá nhân</span>
+      </a>
+      <a href="/page/cart/index.html">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span>Giỏ hàng</span>
+      </a>
+      <button class="close-btn">
+        <i class="fa-solid fa-circle-xmark"></i>
+      </button>
+    </div>
+    <script type="module" src="index.js"></script>
+    <script type="module" src="../../utils/common.js"></script>
+    <script
+      src="https://kit.fontawesome.com/44c439f475.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
