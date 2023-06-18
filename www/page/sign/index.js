@@ -14,10 +14,12 @@ items.forEach((element) => {
 const signIn = $(".sign-item:first-child");
 const signUp = $(".sign-item:last-child");
 const signContent = $(".sign-content");
-const signInBtn = $(".sign-button");
+const signInBtn = $(".sign-in .sign-button");
+const signUpBtn = $(".sign-up .sign-button");
 const phoneInput = $(".sign-input[type=text]");
 const passInput = $(".sign-input[type=password]");
-const checkText = $(".check-sign");
+const checkSignIn = $(".sign-in .check-sign");
+const checkSignUp = $(".sign-up .check-sign");
 
 signIn.addEventListener("click", () => {
   signContent.style = "transform: translateX(0)";
@@ -25,6 +27,11 @@ signIn.addEventListener("click", () => {
 
 signUp.addEventListener("click", () => {
   signContent.style = "transform: translateX(-100vw)";
+});
+
+signUpBtn.addEventListener("click", () => {
+  checkSignUp.style.color = "green";
+  checkSignUp.style.display = "block";
 });
 
 async function logJSONData() {
@@ -38,12 +45,12 @@ async function logJSONData() {
         localStorage.setItem("user", JSON.stringify(userData));
         window.location.href = "/page/product/index.html";
       } else {
-        checkText.style.display = "block";
-        checkText.innerHTML = "Mật khẩu sai!";
+        checkSignIn.style.display = "block";
+        checkSignIn.innerHTML = "Mật khẩu sai!";
       }
     } else {
-      checkText.style.display = "block";
-      checkText.innerHTML = "Số điện thoại hoặc mật khẩu sai!";
+      checkSignIn.style.display = "block";
+      checkSignIn.innerHTML = "Số điện thoại hoặc mật khẩu sai!";
     }
   });
 }
