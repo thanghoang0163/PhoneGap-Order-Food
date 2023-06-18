@@ -55,15 +55,21 @@ async function logJSONData() {
   const signData = await resSign.json();
   const userData = await resUser.json();
   signInBtn.addEventListener("click", () => {
-    if (phoneSignIn.value == signData.user.phone) {
+    if (phoneSignIn.value == "" || passSignIn.value == "") {
+      checkSignIn.style.color = "red";
+      checkSignIn.style.display = "block";
+      checkSignIn.innerHTML = "Vui lòng điền đầy đủ thông tin!";
+    } else if (phoneSignIn.value == signData.user.phone) {
       if (passSignIn.value == signData.user.password) {
         localStorage.setItem("user", JSON.stringify(userData));
         window.location.href = "/page/product/index.html";
       } else {
         checkSignIn.style.display = "block";
+        checkSignIn.innerHTML = "Số điện thoại hoặc mật khẩu sai!";
       }
     } else {
       checkSignIn.style.display = "block";
+      checkSignIn.innerHTML = "Số điện thoại hoặc mật khẩu sai!";
     }
   });
 }
