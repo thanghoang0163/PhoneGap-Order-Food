@@ -9,10 +9,6 @@ const phone = $(".phone");
 const address = $(".address");
 const updateBtn = $(".update-btn");
 
-backBtn.addEventListener("click", () => {
-  history.go(-1);
-});
-
 editBtns.forEach((edit, index) => {
   edit.addEventListener("click", () => {
     inputs.forEach((input, idx) => {
@@ -32,4 +28,8 @@ updateBtn.addEventListener("click", () => {
   var updatedInfo = { name: name, phone: phone, address: address };
   localStorage.setItem("user", JSON.stringify(updatedInfo));
   window.location.href = "/page/product/index.html";
+});
+
+backBtn.addEventListener("click", () => {
+  history.go(-1);
 });
