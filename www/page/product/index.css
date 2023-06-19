@@ -105,50 +105,7 @@ body {
   width: 100%;
 }
 
-.side-menu {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 20px;
-  background-color: #fff;
-  transform: translateX(-100%);
-  transition: all 0.2s linear;
-}
-
-.side-menu a {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: #666;
+.product-profile-btn {
+  color: #c7c6c6;
   font-size: 25px;
-  margin-top: 30px;
-  font-weight: 600;
-}
-
-.side-menu i {
-  margin-right: 10px;
-  color: #fa4a0c;
-}
-
-.side-menu a:first-child i {
-  margin-right: 12px;
-}
-
-.side-menu a:nth-child(2) i {
-  padding-left: 3px;
-  margin-right: 12px;
-}
-
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 0;
-  background-color: transparent;
-  border: none;
-  font-size: 25px;
-  color: #fa4a0c;
 }

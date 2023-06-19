@@ -6,18 +6,8 @@ var $ = document.querySelector.bind(document);
 var $$ = document.querySelectorAll.bind(document);
 
 const sideMenu = $(".side-menu");
-const menuBtn = $(".product-menu-btn");
-const closeBtn = $(".close-btn");
 const productList = $(".product-list");
 const cartBtn = $(".cart-btn");
-
-menuBtn.addEventListener("click", () => {
-  sideMenu.style = `transform: translateX(0)`;
-});
-
-closeBtn.addEventListener("click", () => {
-  sideMenu.style = `transform: translateX(-100%)`;
-});
 
 function renderProducts() {
   fetch("https://testapi.io/api/thanghoang/products", {
