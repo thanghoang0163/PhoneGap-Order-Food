@@ -16,6 +16,8 @@ body {
 
 .cart-header {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 20px;
@@ -26,11 +28,17 @@ body {
   background-color: transparent;
   font-size: 20px;
   font-weight: 600;
+  padding: 0;
 }
 
 .cart-header-text {
   flex: 1;
   text-align: center;
+}
+
+.product-profile-btn {
+  color: #c7c6c6;
+  font-size: 25px;
 }
 
 .cart-body {
@@ -108,7 +116,7 @@ body {
   position: fixed;
   bottom: 0;
   left: 0;
-  display: flex;
+  display: none;
   justify-content: center;
   width: 100%;
   padding: 20px;
@@ -123,4 +131,8 @@ body {
   background: #fa4a0c;
   border-radius: 30px;
   width: 100%;
+}
+
+.show {
+  display: flex;
 }
