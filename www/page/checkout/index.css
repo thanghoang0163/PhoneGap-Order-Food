@@ -15,6 +15,8 @@ body {
 
 .checkout-header {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 20px;
@@ -25,11 +27,17 @@ body {
   background-color: transparent;
   font-size: 20px;
   font-weight: 600;
+  padding: 0;
 }
 
 .checkout-header-text {
   flex: 1;
   text-align: center;
+}
+
+.product-profile-btn {
+  color: #c7c6c6;
+  font-size: 25px;
 }
 
 .checkout-title {
@@ -45,26 +53,6 @@ body {
   background-color: #e5e5e5;
   box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.03);
   border-radius: 20px;
-}
-
-.checkout-info {
-  margin-top: 40px;
-}
-
-.checkout-info-content {
-  display: block;
-}
-
-.checkout-info-img {
-  width: 80px;
-  margin-right: 20px;
-}
-
-.checkout-name,
-.checkout-address {
-  margin-bottom: 10px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #fff;
 }
 
 .checkout-payment,

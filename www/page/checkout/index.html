@@ -54,35 +54,46 @@
           <i class="fa-solid fa-chevron-left"></i>
         </button>
         <div class="checkout-header-text">Phương thức thanh toán</div>
-      </div>
-      <div class="checkout-info">
-        <div class="checkout-title">Địa chỉ</div>
-        <div class="checkout-content checkout-info-content">
-          <div class="checkout-name">Nguyen Van A</div>
-          <div class="checkout-address">
-            123 Nguyễn Văn Cừ, Thống Nhất, TP.Thủ Đức
-          </div>
-          <div class="checkout-phone">0123456789</div>
-        </div>
+        <a
+          href="/page/profile/index.html"
+          class="product-header-btn product-profile-btn"
+        >
+          <i class="fa-solid fa-user"></i>
+        </a>
       </div>
       <div class="checkout-payment">
         <div class="checkout-title">Phương thức thanh toán</div>
         <div class="checkout-content checkout-payment-content">
           <div class="checkout-payment-item">
-            <input type="radio" name="payment" class="checkout-radio-btn" />
+            <input
+              type="radio"
+              id="payment-atm"
+              name="payment"
+              class="checkout-radio-btn checkout-payment-btn"
+              value="Thẻ ATM"
+              checked
+            />
             <img
               src="../../img/card.png"
               class="checkout-card-img checkout-payment-img"
             />
-            <label class="checkout-payment-text" for="payment">Thẻ ATM</label>
+            <label class="checkout-payment-text" for="payment-atm"
+              >Thẻ ATM</label
+            >
           </div>
           <div class="checkout-payment-item">
-            <input type="radio" name="payment" class="checkout-radio-btn" />
+            <input
+              type="radio"
+              id="payment-bank"
+              name="payment"
+              class="checkout-radio-btn checkout-payment-btn"
+              value="Tài khoản ngân hàng"
+            />
             <img
               src="../../img/bank.png"
               class="checkout-bank-img checkout-payment-img"
             />
-            <label class="checkout-payment-text" for="payment"
+            <label class="checkout-payment-text" for="payment-bank"
               >Tài khoản ngân hàng</label
             >
           </div>
@@ -92,14 +103,27 @@
         <div class="checkout-title">Phương thức giao hàng</div>
         <div class="checkout-content checkout-payment-content">
           <div class="checkout-payment-item">
-            <input type="radio" name="delivery" class="checkout-radio-btn" />
-            <label class="checkout-payment-text" for="payment"
+            <input
+              type="radio"
+              id="delivery-1"
+              name="delivery"
+              class="checkout-radio-btn checkout-delivery-btn"
+              value="Giao đến cửa"
+              checked
+            />
+            <label class="checkout-payment-text" for="payment-1"
               >Giao đến cửa</label
             >
           </div>
           <div class="checkout-payment-item">
-            <input type="radio" name="delivery" class="checkout-radio-btn" />
-            <label class="checkout-payment-text" for="payment"
+            <input
+              type="radio"
+              id="delivery-2"
+              name="delivery"
+              class="checkout-radio-btn checkout-delivery-btn"
+              value="Xuống nhận hàng"
+            />
+            <label class="checkout-payment-text" for="payment-2"
               >Xuống nhận hàng</label
             >
           </div>
