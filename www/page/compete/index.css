@@ -10,6 +10,7 @@ body {
 .compete {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
   padding: 20px;
   padding-bottom: 110px;
 }
@@ -26,6 +27,7 @@ body {
   background-color: transparent;
   font-size: 20px;
   font-weight: 600;
+  padding: 0;
 }
 
 .compete-header-text {
@@ -125,11 +127,11 @@ body {
   margin: 0 10px;
 }
 
-.compete-card-img {
+.compete-card {
   background: #f47b0a;
 }
 
-.compete-bank-img {
+.compete-bank {
   background: linear-gradient(0deg, #eb4796, #eb4796), #c4c4c4;
 }
 
@@ -141,14 +143,15 @@ body {
   position: fixed;
   bottom: 0;
   left: 0;
-  display: flex;
+  display: none;
   justify-content: center;
   width: 100%;
   padding: 20px;
   background-color: #fff;
 }
 
-.compete-btn {
+.compete-btn,
+.buy-btn {
   border: none;
   color: #fff;
   font-size: 20px;
@@ -156,6 +159,18 @@ body {
   background: #fa4a0c;
   border-radius: 30px;
   width: 100%;
+}
+
+.buy {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(100%);
+}
+
+.buy-btn {
+  margin-top: 20px;
 }
 
 .overlay {
