@@ -17,11 +17,13 @@ const competeBtn = $(".compete-btn");
 const competeBody = $(".compete-body");
 const paymentImg = $(".compete-bank-img");
 const paymentLabel = $(".compete-payment-text");
+const deliveryLabel = $(".compete-delivery-text");
 const phone = $(".compete-phone");
 const name = $(".compete-name");
 const address = $(".compete-address");
 
 const payment = JSON.parse(localStorage.getItem("payment"));
+const delivery = JSON.parse(localStorage.getItem("delivery"));
 
 if (payment) {
   paymentLabel.innerHTML = payment.title;
@@ -32,6 +34,10 @@ if (payment) {
     paymentImg.setAttribute("src", "../../img/bank.png");
     paymentImg.classList.add("compete-bank");
   }
+}
+
+if (delivery) {
+  deliveryLabel.innerHTML = delivery.title;
 }
 
 const user = JSON.parse(localStorage.getItem("user"));
