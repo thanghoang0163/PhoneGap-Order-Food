@@ -12,7 +12,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   padding: 20px;
-  padding-bottom: 110px;
+  padding-bottom: 160px;
 }
 
 .compete-header {
@@ -144,10 +144,20 @@ body {
   bottom: 0;
   left: 0;
   display: none;
+  flex-direction: column;
   justify-content: center;
   width: 100%;
   padding: 20px;
   background-color: #fff;
+  border-top: solid 1px #cccccc;
+}
+
+.compete-total {
+  color: green;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: right;
+  margin-bottom: 20px;
 }
 
 .compete-btn,

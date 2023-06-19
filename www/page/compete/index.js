@@ -21,6 +21,7 @@ const deliveryLabel = $(".compete-delivery-text");
 const phone = $(".compete-phone");
 const name = $(".compete-name");
 const address = $(".compete-address");
+const total = $(".compete-total-number");
 
 const payment = JSON.parse(localStorage.getItem("payment"));
 const delivery = JSON.parse(localStorage.getItem("delivery"));
@@ -54,25 +55,31 @@ products ? btn.classList.add("show") : btn.classList.remove("show");
 
 const notEmpty = products
   ? products.map((prod) => {
-      if (prod.amount != 0) {
-        return `
-      <div class="product-item">
-        <img src="${prod.image}" class="product-img" />
-        <div class="product-number">
-          <span class="product-name">${prod.name}</span>
-          <div class="price-container">
-            <span class="number">${prod.amount}</span>
-            <span class="product-price">${formatNumber(
-              prod.price * prod.amount
-            )}</span>
+      if (prod.amount) {
+        if (prod.amount != 0) {
+          return `
+        <div class="product-item">
+          <img src="${prod.image}" class="product-img" />
+          <div class="product-number">
+            <span class="product-name">${prod.name}</span>
+            <div class="price-container">
+              <span class="number">${prod.amount}</span>
+              <span class="product-price">${formatNumber(
+                prod.price * prod.amount
+              )}</span>
+            </div>
           </div>
-        </div>
-      </div>`;
+        </div>`;
+        }
       }
     })
   : [];
 
 prodsContainer.innerHTML = notEmpty.join("");
+
+total.innerHTML = formatNumber(
+  products.reduce((acc, curr) => acc + curr.amount * curr.price, 0)
+);
 
 competeBtn.addEventListener("click", (e) => {
   overlay.classList.add("show");
