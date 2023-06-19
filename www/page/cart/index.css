@@ -121,6 +121,7 @@ body {
   width: 100%;
   padding: 20px;
   background-color: #fff;
+  border-top: solid 1px #cccccc;
 }
 
 .buy-btn {
