@@ -1,11 +1,8 @@
-// import { database } from "./firebase.js";
-// import { ref, child, get } from "firebase/database";
 import { formatNumber } from "../../utils/common.js";
 
 var $ = document.querySelector.bind(document);
 var $$ = document.querySelectorAll.bind(document);
 
-const sideMenu = $(".side-menu");
 const productList = $(".product-list");
 const cartBtn = $(".cart-btn");
 
@@ -17,7 +14,7 @@ function renderProducts() {
       return response.json();
     })
     .then((products) => {
-      localStorage.setItem("products", JSON.stringify(products));
+      var updatedProducts = products;
 
       const ul = products.map(
         (prod) => `
@@ -27,8 +24,8 @@ function renderProducts() {
         <div class="price-container">
           <span class="product-price">${formatNumber(prod.price)}</span>
           <div class="amount">
-            <button class="decrease" ">-</button>
-            <span class="number">0</span>
+            <button class="decrease" data-id="${prod.id}">-</button>
+            <span class="number" data-id="${prod.id}">0</span>
             <button class="increase" data-id="${prod.id}">+</button>
           </div>
         </div>
@@ -37,77 +34,48 @@ function renderProducts() {
 
       productList.innerHTML = ul.join("");
 
-      const decreaseBtn = $(".decrease");
-      const increaseBtn = $(".increase");
-      const number = $(".number");
-      const prodItem = $$(".product-item");
-      var count = 0;
+      const decreaseBtn = $$(".decrease");
+      const increaseBtn = $$(".increase");
+      const number = $$(".number");
+      var amount = 0;
 
-      prodItem.forEach((item) => {
-        increaseBtn.addEventListener("click", (e) => {
-          if (e.target.dataset.id == item.id) {
-            number.innerHTML = count++;
-          }
+      increaseBtn.forEach((btn) => {
+        let count = amount;
+        btn.addEventListener("click", (e) => {
+          number.forEach((num) => {
+            if (e.target.dataset.id == num.getAttribute("data-id")) {
+              num.innerHTML = count++;
+              amount = count;
+              updatedProducts[e.target.dataset.id - 1] = {
+                ...updatedProducts[e.target.dataset.id - 1],
+                amount: count - 1,
+              };
+            }
+          });
+        });
+      });
+
+      decreaseBtn.forEach((btn) => {
+        let count = amount;
+        btn.addEventListener("click", (e) => {
+          number.forEach((num) => {
+            if (e.target.dataset.id == num.getAttribute("data-id")) {
+              count != 0 ? (num.innerHTML = count--) : (num.innerHTML = "0");
+              amount = count;
+              updatedProducts[e.target.dataset.id - 1] = {
+                ...updatedProducts[e.target.dataset.id - 1],
+                amount,
+              };
+            }
+          });
         });
       });
 
       cartBtn.addEventListener("click", () => {
-        const updatedProds = products.map((prod) => ({
-          ...prod,
-          amount: 1,
-        }));
-        localStorage.setItem("products", JSON.stringify(updatedProds));
+        localStorage.setItem("products", JSON.stringify(updatedProducts));
         window.location.href = "/page/cart/index.html";
       });
     });
 }
 
 renderProducts();
-
-// const getAPI = () => {
-//   const dbRef = ref(database);
-//   get(child(dbRef, `user/1`))
-//     .then((snapshot) => {
-//       if (snapshot.exists()) {
-//         console.log(snapshot.val());
-//       } else {
-//         console.log("No data available");
-//       }
-//     })
-//     .catch((error) => {
-//       console.error(error);
-//     });
-// };
-
-// getAPI();
-
-// async function logJSONData() {
-//   // main.js
-
-//   // POST request using fetch()
-//   fetch("https://testapi.io/api/thanghoang/sign", {
-//     // Adding method type
-//     method: "PUT",
-
-//     // Adding body or contents to send
-//     body: JSON.stringify({
-//       user: {
-//         phone: "0123456789",
-//         password: "121",
-//       },
-//     }),
-
-//     // Adding headers to the request
-//     headers: {
-//       Accept: "application/json",
-//       "Content-type": "application/json",
-//     },
-//   })
-//     // Converting to JSON
-//     .then((response) => response.json())
-
-//     // Displaying results to console
-//     .then((json) => console.log(json));
-// }
-
-// logJSONData();
