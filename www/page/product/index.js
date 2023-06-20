@@ -14,7 +14,9 @@ function renderProducts() {
       return response.json();
     })
     .then((products) => {
-      var updatedProducts = products;
+      var updatedProducts = products.map((item) => {
+        return { ...item, amount: 0 };
+      });
 
       const ul = products.map(
         (prod) => `
@@ -37,18 +39,17 @@ function renderProducts() {
       const decreaseBtn = $$(".decrease");
       const increaseBtn = $$(".increase");
       const number = $$(".number");
-      var amount = 0;
 
       increaseBtn.forEach((btn) => {
-        let count = amount;
         btn.addEventListener("click", (e) => {
           number.forEach((num) => {
-            if (e.target.dataset.id == num.getAttribute("data-id")) {
-              num.innerHTML = count++;
-              amount = count;
-              updatedProducts[e.target.dataset.id - 1] = {
-                ...updatedProducts[e.target.dataset.id - 1],
-                amount: count - 1,
+            const id = +e.target.dataset.id;
+            if (id == num.getAttribute("data-id")) {
+              let count = updatedProducts[id - 1].amount;
+              num.innerHTML = ++count;
+              updatedProducts[id - 1] = {
+                ...updatedProducts[id - 1],
+                amount: count,
               };
             }
           });
@@ -56,15 +57,15 @@ function renderProducts() {
       });
 
       decreaseBtn.forEach((btn) => {
-        let count = amount;
         btn.addEventListener("click", (e) => {
           number.forEach((num) => {
-            if (e.target.dataset.id == num.getAttribute("data-id")) {
-              count != 0 ? (num.innerHTML = count--) : (num.innerHTML = "0");
-              amount = count;
-              updatedProducts[e.target.dataset.id - 1] = {
-                ...updatedProducts[e.target.dataset.id - 1],
-                amount,
+            const id = e.target.dataset.id;
+            if (id == num.getAttribute("data-id")) {
+              let count = updatedProducts[id - 1].amount;
+              count != 0 ? (num.innerHTML = --count) : (count = 0);
+              updatedProducts[id - 1] = {
+                ...updatedProducts[id - 1],
+                amount: count,
               };
             }
           });
