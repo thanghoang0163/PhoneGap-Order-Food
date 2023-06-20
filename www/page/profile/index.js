@@ -20,12 +20,26 @@ editBtns.forEach((edit, index) => {
 
 const user = JSON.parse(localStorage.getItem("user"));
 
-name.value = user.name;
-phone.value = user.phone;
-address.value = user.address;
+if (user) {
+  name.value = user.name;
+  phone.value = user.phone;
+  address.value = user.address;
+}
+
+var updatedInfo = {
+  name: name.value,
+  phone: phone.value,
+  address: address.value,
+};
+
+inputs.forEach((item) => {
+  item.addEventListener("input", (e) => {
+    const type = e.target.dataset.type;
+    updatedInfo = { ...updatedInfo, [type]: e.target.value };
+  });
+});
 
 updateBtn.addEventListener("click", () => {
-  var updatedInfo = { name: name, phone: phone, address: address };
   localStorage.setItem("user", JSON.stringify(updatedInfo));
   window.location.href = "/page/product/index.html";
 });
