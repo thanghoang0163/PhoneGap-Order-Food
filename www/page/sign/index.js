@@ -23,6 +23,8 @@ const passSignUp = $(".sign-up .sign-input[type=password]");
 const checkSignIn = $(".sign-in .check-sign");
 const checkSignUp = $(".sign-up .check-sign");
 
+var sign = JSON.parse(localStorage.getItem("sign"));
+
 signIn.addEventListener("click", () => {
   signContent.style = "transform: translateX(0)";
 });
@@ -47,21 +49,26 @@ signUpBtn.addEventListener("click", () => {
     checkSignUp.style.display = "block";
     checkSignUp.innerHTML = "Vui lòng điền đầy đủ thông tin!";
   }
+
+  sign = { phone: phoneSignUp.value, password: passSignUp.value };
+  localStorage.setItem("sign", JSON.stringify(sign));
 });
 
 async function logJSONData() {
-  const resSign = await fetch("https://testapi.io/api/thanghoang/sign");
-  const resUser = await fetch("https://testapi.io/api/thanghoang/user");
-  const signData = await resSign.json();
-  const userData = await resUser.json();
+  const userInfo = await fetch("https://testapi.io/api/thanghoang/user");
+  const userData = await userInfo.json();
+  const productInfo = await fetch("https://testapi.io/api/thanghoang/products");
+  const productData = await productInfo.json();
+
   signInBtn.addEventListener("click", () => {
     if (phoneSignIn.value == "" || passSignIn.value == "") {
       checkSignIn.style.color = "red";
       checkSignIn.style.display = "block";
       checkSignIn.innerHTML = "Vui lòng điền đầy đủ thông tin!";
-    } else if (phoneSignIn.value == signData.user.phone) {
-      if (passSignIn.value == signData.user.password) {
+    } else if (phoneSignIn.value == sign.phone) {
+      if (passSignIn.value == sign.password) {
         localStorage.setItem("user", JSON.stringify(userData));
+        localStorage.setItem("products", JSON.stringify(productData));
         window.location.href = "/page/product/index.html";
       } else {
         checkSignIn.style.display = "block";

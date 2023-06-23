@@ -50,6 +50,9 @@ if (user) {
 }
 
 const products = JSON.parse(localStorage.getItem("products"));
+const initProducts = products.map((product) => {
+  return { ...product, amount: 0 };
+});
 
 products ? btn.classList.add("show") : btn.classList.remove("show");
 
@@ -90,9 +93,8 @@ overlay.addEventListener("click", () => {
   overlay.classList.remove("show");
   enableScroll();
   competeBody.innerHTML = "";
-  localStorage.removeItem("products");
-  localStorage.removeItem("payment");
-  localStorage.removeItem("delivery");
+
+  localStorage.setItem("products", JSON.stringify(initProducts));
   buyContainer.classList.add("show");
 });
 

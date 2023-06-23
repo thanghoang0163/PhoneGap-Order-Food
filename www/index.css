@@ -34,22 +34,24 @@ body {
   color: #fa4a0c;
 }
 
-.splash-nav {
+.splash-btn {
   position: absolute;
   bottom: 50px;
   right: 50px;
   display: flex;
   align-items: center;
   text-decoration: none;
+  background-color: transparent;
+  border: none;
 }
 
-.splash-nav__text {
+.splash-btn__text {
   color: #fa4a0c;
   font-size: 20px;
   margin-right: 10px;
 }
 
-.splash-nav div {
+.splash-btn div {
   display: flex;
   align-items: center;
   justify-content: center;
