@@ -8,6 +8,9 @@ const deliveryBtn = $$(".checkout-delivery-btn");
 var payment = { title: "Thẻ ATM", method: "payment" };
 var delivery = { title: "Giao đến cửa", method: "delivery" };
 
+localStorage.setItem("payment", JSON.stringify(payment));
+localStorage.setItem("delivery", JSON.stringify(delivery));
+
 const checkRadioBtn = (btn, obj) => {
   btn.forEach((item) => {
     item.addEventListener("click", () => {

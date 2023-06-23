@@ -53,6 +53,8 @@ const products = JSON.parse(localStorage.getItem("products"));
 const initProducts = products.map((product) => {
   return { ...product, amount: 0 };
 });
+const initPayment = { ...payment, title: "Thẻ ATM" };
+const initDelivery = { ...delivery, title: "Giao đến cửa" };
 
 products ? btn.classList.add("show") : btn.classList.remove("show");
 
@@ -95,6 +97,8 @@ overlay.addEventListener("click", () => {
   competeBody.innerHTML = "";
 
   localStorage.setItem("products", JSON.stringify(initProducts));
+  localStorage.setItem("payment", JSON.stringify(initPayment));
+  localStorage.setItem("delivery", JSON.stringify(initDelivery));
   buyContainer.classList.add("show");
 });
 
