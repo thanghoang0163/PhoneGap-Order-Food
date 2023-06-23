@@ -1,6 +1,6 @@
 # PhoneGap-Order-Food
 
-## 🚀 Installation
+## 🚀 Installation Package
 
 ```bash
 # Cordova
@@ -10,7 +10,7 @@ npm install -g cordova
 npm install -g phonegap
 ```
 
-## 🚀 Build Mobile App
+## 🚀 Build the App
 
 ```bash
 # Android
@@ -20,7 +20,7 @@ cordova build android
 cordova build ios
 ```
 
-## 🚀 Run Mobile App
+## 🚀 Run the App
 
 ```bash
 # Android
